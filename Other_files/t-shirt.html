@@ -1,0 +1,43 @@
+<HTML>
+     <HEAD>
+            <TITLE>Online Shoping </TITLE>
+            <SCRIPT language=VBScript>
+                      sub showresults()
+                           dim calc,x
+                           calc=0
+                           x=cint(document.frm.txt.value)
+                                if document.frm.list1.selectedindex=0 then
+                                     calc=calc+650*x
+                               end if
+                              if document.frm.list1.selectedindex=1 then
+                                     calc=calc+300*x
+                              end if
+                             if document.frm.list1.selectedindex=2 then
+                                       calc=calc+900*x
+                             end if
+                                       msgbox("Your Bill Amount Is Rs."&calc)
+                            end sub
+            </SCRIPT>
+     </HEAD>
+     <BODY BACKGROUND="G:\PROJECT FILE\HTML\Copy of 032.JPG" >
+         <H2 ALIGN="CENTER">  Online Shopping </H2><CENTER>
+<TABLE BORDER=2><TR><TD>
+               <FORM name=frm> 
+                       <B>Select  Your Choice (Any One) </B> <BR>
+                          <PRE>      <SELECT size=3 name=list1> 
+                                                       <OPTION>Shirts 650
+                                                       <OPTION>T-Shirt 300
+                                                       <OPTION>Trouseres 900
+                                                       </OPTION>
+                                             </SELECT> <BR><BR>
+                          </PRE>
+                       <B> Enter Number of item you want  : </B> 
+                           <INPUT name=txt Typ="text" Size="4"><BR>
+                          <PRE> 
+                              <INPUT type=button  value="Calculate" onclick="showresults()">
+                          </PRE>
+               </FORM>
+               </TD></TR>
+              </TABLE></CENTER>
+     </BODY>
+</HTML>

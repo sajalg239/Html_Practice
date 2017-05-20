@@ -1,0 +1,63 @@
+<html>
+     <head> 
+         <Script Language="VBScript">
+             sub calc()
+            dim tcode, na, nc, d, t
+              tcode=f1.t1.value
+              na=cint(f1.t2.value)
+              nc=cint(f1.t3.value)
+              d=cint(f1.t4.value)
+                  if d>=1000 then 
+                      t=500*na+250*nc
+                  elseif d>=500 and d<1000 then
+                     t=na*300+nc*150
+                  else 
+                     t=na*200+nc*100
+                 end if
+                     f1.t5.value=t
+                 end sub
+         </script>
+      </head>
+      <body BACKGROUND="G:\PROJECT FILE\HTML\121.JPG">
+            <H1 Align="center"> <FONT COLOR="BLUE"> TRAVELLING AGENT </FONT> </H1>
+             <center>
+             <table border=3> 
+             <tr>
+             <td>
+            <form name="f1">
+             <FONT SIZE=5>
+            <TABLE>
+                 <TR>
+                      <TH align=left><font size="4"> T_Code </TH>
+                      <TH><Input type="text" name="t1"> </TH>
+                 </TR>
+                 <TR>
+                      <TH align=left>Number Of Adults </TH>
+                      <TH><Input Type="text" name="t2"> </TH>
+                 </TR>
+                 <TR>
+                     <TH align=left>Number of Children </TH>
+                     <TH><input type="text" name="t3"> </TH>
+                 </TR>
+                 <TR>
+                     <TH align=left>Distance Covered </TH>
+                     <TH><input type="text" name="t4" > </TH>
+                 </TR>
+                 <TR>
+                     <TH align=left>Total Fare </TH>
+                     <TH><input type="text" name="t5"></TH>  
+                 </TR>
+                <TR ALIGN="CENTER">
+             <TD>                      <input type="button" value="calculate" onclick=calc()>
+                     <TD> <Input type="reset">
+                 </TR>
+            </TABLE>   
+
+            </form>
+           </td>
+           </tr>
+      </table>
+       </center>
+     </body>    
+</HTML>   
+   

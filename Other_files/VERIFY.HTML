@@ -1,0 +1,41 @@
+<HTML>
+    <HEAD>
+      <TITLE>VERIFY</TITLE>
+      <SCRIPT LANGUAGE="VBSCRIPT">
+        SUB CALCULATE
+         DIM A, SUM
+           A=DOCUMENT.FRM.TXT1.VALUE
+           IF (DOCUMENT.FRM.R1.CHECKED) THEN
+               SUM=SUM+56000
+           ELSE IF(DOCUMENT.FRM.R1.CHECKED)              THEN
+               SUM=SUM+50000
+           END IF 
+     IF (DOCUMENT.FRM.CHK1.CHECKED) THEN
+         SUM=SUM+5000
+     END IF
+    IF (DOCUMENT.FRM.CHK2.CHECKED) THEN
+      SUM=SUM+15000
+    END IF
+      Y=SUM
+     END SUB
+         MSGBOX("YOUR BILL AMOUNT IS RS."&Y)
+     </SCRIPT>
+    </HEAD>
+   <BODY BGCOLOR="AQUA">
+     <FORM NAME="FRM">
+        <TABLE ALIGN=CENTER>
+           <TR><TD>ENROLLMENT NO.
+           <TD COLSPAN=2><INPUT TYPE="TEXT"              NAME="TXT1">
+                 <TR><TD>COURSE
+              <TD><INPUT TYPE="RADIO" NAME="R1"                      VALUE="MBA">MBA
+              <TD><INPUT TYPE="RADIO" NAME="R1"                     VALUE="MCA">MCA
+            <TR><TD>FACILITY AVAILABLE
+           <TD><INPUT TYPE="CHECKBOX"                             NAME="CHK1" VALUE="LIBRARY">                           LIBRARY
+           <TD><INPUT TYPE="CHECKBOX"                                NAME="CHK2" VALUE="HOSTEL">
+               HOSTEL 
+         <TR>
+          <TD COLSPAN><INPUT TYPE="SUBMIT"                  VALUE="VERIFY"                                         ONCLICK="CALCULATE">
+          </TABLE>
+         </FORM>
+    </BODY>
+</HTML>
