@@ -1,0 +1,30 @@
+<script language="vbscript">
+     sub checkeven(number)
+           if number mod 2=0 then
+              document.write("<h1><font color=green>Even")
+           else
+ 	       document.write("<font size=24 color=red>ODD")
+           end if
+     end sub
+     function factorial(number)
+            dim f,i
+   	    f=1
+            for i=1 to number
+               f=f*i
+            next
+          factorial=f
+      end function
+     
+
+   
+       dim x,fact
+       x=cint(inputbox("Enter the number to calculate the factorial"))
+       fact=factorial(x)
+       document.write("<font size=22 color=cyan>Factorial of the entered number="&fact&"<br>")
+       call checkeven(x) 
+       
+		
+      </script>
+       
+     
+

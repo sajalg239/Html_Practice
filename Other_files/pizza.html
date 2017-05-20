@@ -1,0 +1,39 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0031)file://\\Internet\D\tshirt.html --><HTML><HEAD><TITLE>ss</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=windows-1252">
+<SCRIPT language=VBScript>
+       sub showresults()
+        dim calc,x,name
+         name=document.frm.txt.value
+         calc=0
+         if document.frm.ptype(0).checked then
+            calc=100
+         else
+            calc=150
+         end if
+         if document.frm.list1.selectedindex=0 then
+          calc=calc+20
+         end if
+         if document.frm.list1.selectedindex=1 then
+          calc=calc+25
+         end if
+         if document.frm.list1.selectedindex=2 then
+          calc=calc+30
+          end if
+           msgbox("Dear "&name&"! your bill amount is Rs."&calc)
+          end sub
+      </SCRIPT>
+
+<META content="MSHTML 6.00.2900.2096" name=GENERATOR></HEAD>
+<BODY>
+<FORM name=frm>
+<h1>Yummy Pizza</h1><br>
+  Customer name:    <input type="text" name=txt><br><br>
+   Select Pizza Type: <Input type="radio" name="ptype" value=Regular>Regular
+                      <Input type="radio" name="ptype" value=Pan>Pan<br><br>
+            select Topping:
+          <SELECT size=3 name=list1> <OPTION>Cheese </OPTION>
+        			    <OPTION>Capsicum</OPTION>
+				    <OPTION>Peperioni</OPTION></SELECT> <BR><BR>
+          <BR><INPUT  type=button value=Calculate onclick=showresults()> 
+   </FORM></BODY></HTML>

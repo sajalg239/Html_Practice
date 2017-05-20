@@ -1,0 +1,88 @@
+<html>
+     <head>
+           <title> Result  </title>
+           <script language="vbscript">
+                 sub calc()
+                 dim x, y
+                 x=document.frm.txt1.value
+                y=document.frm.s1.value
+               if (document.frm.r1(0).checked) and (y="nonmedical") then
+                  msgbox("you are eligible for nonmedical")
+             elseif (document.frm.r1(1).checked) and (y="medical") then
+                 msgbox("you are eligible for medical")
+              elseif (document.frm.r1(2).checked) and (y="commerce") then          
+                 msgbox("you are eligible for medical")
+              else
+                msgbox("you are not eligible for this stream")
+            end if
+           end sub               
+           </script>
+     </head>
+     <body bgcolor = "pink">
+          <h1 align = "center">  <font color ="red"> RESULT  ANALYSIS  OF CLASS  XI </font> </h1>
+          <pre>Public examination at the end of Class XI in India is conducted by CBSE/ ISC at the national level and by the respective state board at the state level
+                     the result of our School is as follows: Form 
+          </pre>
+          <img src ="C:\Documents and Settings\student\Desktop\COMPUTERS.gif" width ="100" height ="100" align = "right">
+          <center> <table border ="2" bordercolor ="yellow">
+             <caption> <b> <font color="blue"> RESULT </font> </b> </caption> 
+                <tr>
+                   <th rowspan ="2">Roll No. </th>
+                   <th rowspan ="2">Name </th>
+                   <th colspan ="3">Subject </th>
+                </tr>
+                <tr>
+                   <th> Physics </th>
+                   <th>Chemistry </th>
+                   <th>Maths</th>
+                <tr>
+                    <td>101 </td> 
+                    <td>Anjali</td>
+                    <td>95</td>
+                    <td>98</td>
+                    <td>91</td>
+                </tr>
+                <tr>
+                    <td>101 </td> 
+                    <td>Abhishek</td>
+                    <td>94</td>
+                    <td>98</td>
+                    <td>100</td>
+                </tr>
+                <tr>
+                    <td>101 </td> 
+                    <td>Sumit</td>
+                    <td>98</td>
+                    <td>98</td>
+                    <td>89</td>
+                </tr>          
+          </table>  </center> 
+          <br>
+          Student now check which subject you can take according your percentage by using following Form:
+          <form name="frm">
+             Name:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp	
+             <input type ="text" size ="10" name ="txt1">
+             <br>
+             Select your Subject 
+             <select name="s1">
+                 <option   value ="Nonmedical">Nonmedical </option>
+                 <option   value ="medical">medical </option> 
+                 <option   value ="Commerce">Commerce </option> 
+             </select>
+             <br>
+             Select your percentage range
+             <input type ="radio" value =">80" name ="r1"> >80
+              <br> 
+             &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+            <input type ="radio" value ="<80 and >=60" name ="r1"> <80 and >=60 
+              <br>
+             &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+             &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+            <input type ="radio" value ="<60" name ="r1"> <60
+             <br>
+             <input type ="submit" value ="Submit Query" onclick ="calc()"> 
+             <input type ="Reset"> 
+         </form>
+</body>
+</html>

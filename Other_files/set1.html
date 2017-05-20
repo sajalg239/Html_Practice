@@ -1,0 +1,87 @@
+<html>
+  <head>
+    <Title>Students Record</Title>
+   </Head>
+<Body>
+ <h1 align=center>Result Analysis Of Class XII</h1>
+ <Font Color="Red">Board examination</Font> at the end of Class XII in India is conducted by CBSE/ ISC at the national 
+  level and by the respective  state board at the state level.the result of our School is as follows:  
+
+  % ' Setting a connection object
+	Dim studCon
+	  'Create a connection object.
+	  Set studCon = Server.CreateObject("ADODB.Connection")
+	  'Open a connection using the OLE DB connection string.
+	  studCon.Open  "Provider=Microsoft.Jet.OLEDB.4.0;Data Source="school.mdb"
+%>
+<%	Dim studRec
+	' Creating the recordset object
+	Set studRec=Server.CreateObject("ADODB.Recordset")
+	studRec.Open "STUDENT", studCon,1,3
+%>
+  <FONT SIZE="4" FACE="Comic Sans MS">
+  <H1>Student data record</H1>
+  </FONT>
+  <HR>
+
+  <TABLE BORDER=1>
+  <TR>
+	<TD><% Response.Write ("Sl.No") %> </TD>
+	<TD><% Response.Write ("RollNo") %> </TD>
+	<TD><% Response.Write ("Name") %> </TD>
+	<TD><% Response.Write ("Address") %> </TD>
+  <% Dim sln 
+	sln=1
+	Do While Not studRec.EOF %>
+  <TR>
+	<TD><% Response.Write (sln) %> </TD>
+	<TD><% Response.Write studRec("RollNo") %> </TD>
+	<TD><% Response.Write studRec("Name") %> </TD>
+	<TD><% Response.Write studRec("Address") %> </TD>
+  <% studRec.MoveNext
+	sln=sln+1
+  LOOP %>
+  </TABLE>
+  <%	studRec.Close
+	studCon.Close
+	Set studRec=Nothing
+	Set studCon=Nothing %>
+
+
+<P>Now Check which Subject you can take accroding your percantage by Filling 
+following form: 
+<FORM name=frm>
+<TABLE border=2>
+  <TBODY>
+  <TR>
+    <TD>
+      <TABLE>
+        <TBODY>
+        <TR>
+          <TD>Name: </TD>
+          <TD><INPUT name=txt1></TD>
+        <TR>
+        <TR>
+          <TD>Select your Subject </TD>
+          <TD><SELECT name=s1> <OPTION selected>Nonmedical</OPTION> 
+              <OPTION>medical</OPTION> <OPTION>Commerce</OPTION></SELECT> </TD></TR>
+        <TR>
+          <TD>Select your percentage range</TD>
+          <TD><INPUT type=radio name=r1>&gt;80 </TD>
+        <TR>
+          <TD></TD>
+          <TD><INPUT type=radio name=r1>&lt;80 and &gt;=60 </TD>
+        <TR>
+          <TD></TD>
+          <TD><INPUT type=radio name=r1>&lt;60 </TD>
+        <TR>
+          <TD><INPUT type=submit value="Submit Query" name=s1> 
+          <TD><INPUT type=reset value=Reset> 
+  </TD></TR></TBODY></TABLE></TD></TR></FORM></TBODY>
+  <P></P></FONT></P></BODY></HTML>
+
+
+
+
+
+

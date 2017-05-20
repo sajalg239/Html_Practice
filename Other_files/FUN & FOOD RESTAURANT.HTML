@@ -1,0 +1,64 @@
+<HTML>
+<HEAD>
+<Script Language="Vbscript">
+   sub calculate()
+     dim charges,x,name
+      name=document.frm.txt1.value
+      if document.frm.chk1.checked then
+        x=document.frm.txt2.value
+           charges=charges+x*15
+       end if
+      if document.frm.chk2.checked then
+        x=document.frm.txt3.value
+           charges=charges+x*20
+       end if
+      if document.frm.chk3.checked then
+        x=document.frm.txt4.value
+           charges=charges+x*25
+       end if
+      if document.frm.chk4.checked then
+        x=document.frm.txt5.value
+           charges=charges+x*20
+       end if
+    msgbox(name&" Your Bill is "&charges)
+  End sub
+</script>
+
+  <CENTER>FUN & FOOD RESTAURANT</CENTER></HEAD>
+<BODY BGCOLOR="RED">
+<P>FUN & FOOD RESTAURANR PREPARES & SERVES FOOD & 
+DRINKS TO CUSTOMERS. MEALS ARE GENERALLY SERVED & 
+EATEN ON PREMISES.</P>
+<P>INFORMATION OF CUSTOMERS ARE:</P>
+<TABLE ALIGN="CENTER" BGCOLOR="BLUE" BORDER="2">
+<TR>
+<TH>CUSTOMER_ID
+<TH>CUSTOMER_NAME
+<TH>CUSTOMER_ADDRESS
+<TR>
+<TD>C101
+<TD>PRAVEEN
+<TD>H NO. 12 SEC-47, ROHINI
+<TR>
+<TD>C102
+<TD>SANJEEV
+<TD>H NO. 42 SEC-17, FARIDABAD
+<TR>
+<TD>C103
+<TD>RAHUL
+<TD>H NO. 407 SEC-1, GURGAON
+</TR>
+</TABLE>
+<P><B>BILL CALCULATION FORM</B></P>
+<form name=frm>
+ENTER THE CUSTOMERS NAME<INPUT TYPE="TEXT" NAME="TXT1" VALUE="ENTER YOUR NAME"><BR><BR><BR>
+SELECT THE ITEMS YOU WANT & WRITE THEIR QUANTITY IN TEXT BOXES <BR><BR><BR><BR>
+<INPUT TYPE="CHECKBOX" NAME="CHK1" VALUE="ALLOO TIKKI ">ALLOO TIKKI 15/-<INPUT TYPE="TEXT" NAME="TXT2"><BR><BR><BR>
+<INPUT TYPE="CHECKBOX" NAME="CHK2" VALUE="CHAOMN ">CHAOMN 20/-<INPUT TYPE="TEXT" NAME="TXT3"><BR><BR><BR>
+<INPUT TYPE="CHECKBOX" NAME="CHK3" VALUE="DHOKLA ">DHOKLA 25/-<INPUT TYPE="TEXT" NAME="TXT4"><BR><BR><BR>
+<INPUT TYPE="CHECKBOX" NAME="CHK4" VALUE="PLAIN DOSA ">PLAIN DOSA 20/-<INPUT TYPE="TEXT" NAME="TXT5"><BR><BR><BR>
+<INPUT TYPE="SUBMIT" VALUE="CALCULATE" onclick=calculate()>
+<INPUT TYPE="SUBMIT" VALUE="RESET">
+</FORM>
+</BODY>
+</HTML>

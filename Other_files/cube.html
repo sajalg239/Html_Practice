@@ -1,0 +1,31 @@
+<HTML>
+ <HEAD>
+   <TITLE>ss</TITLE>
+     <SCRIPT language=VBScript>
+       sub showresults()
+        dim calc,x
+         x=cint(document.frm1.txt.value)
+         if document.frm1.ptype(0).checked then
+            calc=x*3
+         else
+            calc=x^3
+         end if
+          document.frm1.txt2.value=calc
+          end sub
+      </SCRIPT>
+   </HEAD>
+ <BODY bGCOLOR="#FFFFCC">
+  <CENTER><TABLE BORDER=2><TR><TD><FORM name=frm1>
+         <FONT SIZE=5><TABLE><TR>
+<TD ALIGN=LEFT>
+  Enter A Number: 
+  
+        <TD><input type="text" name=txt><br><br>
+<TR><TD ALIGN=LEFT>       <Input type="radio" name="ptype" value=Three times><B>Three times</B><br><br>
+       <TD><Input type="radio" name="ptype" value=Cube><B>Cube</B><br><br>
+       <TR><TD ALIGN=LEFT>Result: 
+       <TD><input type="text" name=txt2><BR></TABLE>
+       <CENTER><INPUT  type=button value=Calculate onclick=showresults()> </CENTER> 
+   </FORM></TABLE></CENTER>
+ </BODY>
+</HTML>

@@ -1,0 +1,30 @@
+<HTML>
+    <HEAD>
+        <SCRIPT LANGUAGE="VBSCRIPT">
+             SUB CHECK()
+                 DIM X,Y
+               X=DOCUMENT.FRM.TXT1.VALUE
+              Y=DOCUMENT.FRM.TXT2.VALUE
+                    IF Y > 75 THEN
+                        MSGBOX ("CONGRATULATIONS!   " & X & "  YOU ARE ELIGIBLE FOR SCIENCE STREAM")
+                    ELSE 
+                        MSGBOX ("SORRY!" & X & "YOU ARE NOT  ELIGIBLE FOR SCIENCE STREAM")
+                    END IF
+             END SUB
+        </SCRIPT>
+    </HAED>
+    <BODY>
+         <FORM NAME="FRM">
+             <TABLE>
+                  <TR>
+                  <TH>ENTER YOUR NAME
+                  <TH><INPUT TYPE="TEXT" NAME="TXT1">
+                  <TR>
+                  <TD>ENTER YOUR MARKS 
+                  <TD><INPUT TYPE="TEXT" NAME="TXT2"> 
+                  <TR>
+                  <TH COLSPAN="2"><INPUT TYPE="SUBMIT"  VALUE="CHECK" ONCLICK= "CHECK">
+             </TABLE>
+         </FORM>
+    </BODY>
+</HTML>

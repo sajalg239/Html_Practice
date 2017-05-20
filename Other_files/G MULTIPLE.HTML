@@ -1,0 +1,25 @@
+<HTML>
+       <HEAD>
+             <TITLE> GENERATE MULTIPLES </TITLE>
+             <SCRIPT language=VBScript>
+                 DIM  N , M
+                   SUB CALC()
+                      N = CINT(DOCUMENT.FRM.TXT.VALUE)
+                      FOR I =1  TO 10 STEP 1
+                            M = N*I
+                                  DOCUMENT.WRITE  (M & "<BR>") 
+                      NEXT
+                   END SUB 
+             </SCRIPT>
+       </HEAD>
+       <BODY>
+            <H1 ALIGN="CENTER"> TO GENERATE THE MULTIPLE OF  A NUMBER </H1>
+            <FORM NAME="FRM">
+               <H3> Enter the number : 
+                   <INPUT TYPE = "TEXT" NAME = "TXT" SIZE = "5" > </H3>
+               <BR>
+               <INPUT TYPE = "SUBMIT" NAME = "TXT1" ONCLICK = "CALC()" VALUE = "GENERATE MULTIPLES">
+                
+            </FORM>
+       </BODY>
+</HTML>

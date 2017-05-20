@@ -1,0 +1,25 @@
+<html>
+  <head>
+   <Script language="VBScript">
+     sub calculate()
+      dim k
+      k=frmdetails.txtname.value
+      if frmdetails.elements(1).checked then
+		frmdetails.txtresult.value=3*k
+      else
+		frmdetails.txtresult.value=k*k*k
+      end if
+     end sub
+    </script>
+  </head>
+<body>
+  <h1> Examle of procedures</h1>
+  <form name="frmdetails">
+    Enter a number:   <input type="text" size="12" name="txtname"><br>
+    <input type="radio" name="op" value="thrtimes"> three times<br>
+    <input type="radio" name="op" value="cub">Cube<br>
+   Result<Input type="text" name="txtresult" >
+      <Input type="Button" value="Calculate" Onclick="calculate()">
+   </form>
+  </body>
+  </html>

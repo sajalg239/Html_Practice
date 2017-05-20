@@ -1,0 +1,34 @@
+<html>
+  <head>
+   <Script language="VBScript">
+     SUB factorial()
+      dim k,i,f
+	 k=Cint(frm.txt.value)
+	i=1
+	f=1
+	do while(i<=k)
+		f=f*i
+		i=i+1
+	loop
+        DOCUMENT.FRM.TXTRESULT.VALUE=f
+    end sub
+
+       
+    </script>
+  </head>
+<body>
+  <form name="frm">
+ <TABLE>
+   <TR>
+      <TH>Enter a number</TH>
+      <TH> <input type="text" size="12" name="txt"></TH>
+  </TR>
+   <TR>  
+  <TH> Factorial   Of the Number </TH>
+   <TH><Input type="text" name="txtresult" ></TH>
+</TR>
+</TABLE>
+      <Input type="Button" value="Factorial" Onclick="factorial()">
+   </form>
+  </body>
+  </html>

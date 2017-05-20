@@ -1,0 +1,32 @@
+<HTML>
+<HEAD>
+<script LANGUAGE="VBSCRIPT">
+  SUB C_ONCLICK
+     DIM X,Y
+     X=DOCUMENT.FRM.A.VALUE
+     Y=DOCUMENT.FRM.B.VALUE
+          IF X="science" AND Y>=75 THEN
+             MSGBOX"YOU ARE SELECTED"
+          ELSE 
+             MSGBOX"YOUR ARE NOT SELECTED SORRY!!"
+          END IF
+  END SUB
+</SCRIPT>
+</HEAD>
+<BODY BACKGROUND ="G:\PROJECT FILE\HTML\2004_09_Surreal01_1600.jpg">
+<H1 ALIGN ="CENTER"> <FONT COLOR ="BLUE"> Check You Are Eligible For Science Stream  </FONT> </H1>
+<FORM NAME= "FRM">
+<TABLE>
+   <TR>
+     <TH> ENTER YOUR STREAM </TH>
+     <TH><INPUT TYPE="TEXT" NAME="A">  </TH>
+   </TR>
+   <TR>
+     <TH>ENTER YOUR PERCENTAGE </TH>
+     <TH> <INPUT TYPE="TEXT" NAME="B"> </TH>
+   </TR>
+</TABLE>
+   <CENTER><INPUT TYPE="SUBMIT" NAME="C" VALUE="SUBMIT" ONCLICK=" C" >
+</FORM>
+</body>
+</html>

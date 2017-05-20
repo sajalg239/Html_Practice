@@ -1,0 +1,22 @@
+  <script language="vbscript">
+     sub displayinfo(name1,class1)
+          document.write("<h1>Name:" & name1 & "<br>")
+          document.write("<h2>Class:" & class1 & "<br>")
+     end sub
+     function getfullname()
+            dim firstname,lastname,fullname
+             firstname=inputbox("Enter first name")     
+             lastname=inputbox("enter last name")
+             fullname=firstname&" "&lastname
+             getfullname=fullname
+      end function
+        
+		dim n,c,r
+       		n=inputbox("Enter your name")
+       		c=inputbox("enter your class")
+		call displayinfo(n,c)
+
+        	r=getfullname()
+        	document.write("your full name is:"&r)
+       
+      </script>

@@ -1,0 +1,22 @@
+<html>
+<head>
+<script language="vbscript">
+sub s1_onclick
+  a=document.frm.txt1.value
+  b=document.frm.txt2.value
+  if (b>=1) and (b<=100)then
+      msgbox ("thanks you!")
+  else
+      msgbox("Age is not Valid")
+  end if
+end sub
+</script>
+</head>
+<body>
+<form name="frm">
+enter your name<input type="text" name="txt1"><br><br><br>
+enter your age<input type="text" name="txt2"><br><br><br>
+<input type="SUBMIT" value="submit" name="s1">
+</form>
+</body>
+</html>

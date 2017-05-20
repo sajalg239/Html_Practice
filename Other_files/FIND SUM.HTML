@@ -1,0 +1,23 @@
+<HTML>
+       <HEAD>
+             <TITLE> GENERATE MULTIPLES </TITLE>
+             <SCRIPT language="VBScript">
+                SUB CALC() 
+                DIM  A, B, C
+                    A= CINT(DOCUMENT.FRM.TXT.VALUE)
+                    B= CINT(DOCUMENT.FRM.TXT1.VALUE)
+                    C= A + B
+                     DOCUMENT.FRM.TXT2.VALUE=C
+                   END SUB 
+             </SCRIPT>
+       </HEAD>
+       <BODY>
+            <H1 ALIGN="CENTER"> TO FIND THE OF TWO NUMBERS</H1>
+            <FORM NAME="FRM">
+               <H3> Enter numbers into the first two text boxes to find their sum :  </H3>
+                   <INPUT TYPE = "TEXT" NAME = "TXT" SIZE = "5" >   +
+                   <INPUT TYPE = "TEXT" NAME = "TXT1" SIZE = "5"ONCHANGE="CALC()" >  =
+                   <INPUT TYPE = "TEXT" NAME = "TXT2" SIZE = "5">
+            </FORM>
+       </BODY>
+</HTML>

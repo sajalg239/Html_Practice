@@ -1,0 +1,21 @@
+<HTML>
+     <HEAD><TITLE>SUM</TITLE>
+         <SCRIPT LANGUAGE="VBSCRIPT">
+          SUB CALC()
+           X=DOCUMENT.FRM.TXT1.VALUE
+           Y=DOCUMENT.FRM.TXT2.VALUE
+           Z=X+Y
+            DOCUMENT.FRM.TXT3.VALUE=Z
+          END SUB
+         </SCRIPT>
+     </HEAD>
+     <BODY BGCOLOR=AQUA>
+         <CENTER>ENTER NUMBERS INTO THE             FIRST TWO TEXT BOXES TO FIND THEIR                 SUM
+       <FORM NAME="FRM">
+         <INPUT TYPE="TEXT" NAME="TXT1">+
+         <INPUT TYPE="TEXT" NAME="TXT2">=
+         <INPUT TYPE="TEXT" NAME="TXT3"><BR>
+         <INPUT TPYE="BUTTON"                               VALUE="CALCULATE" ONCLICK="CALC()">
+       </FORM>
+     </BODY>
+</HTML>

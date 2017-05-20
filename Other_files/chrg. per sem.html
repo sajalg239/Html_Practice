@@ -1,0 +1,57 @@
+<html>
+       <head>
+           <title> Semester Charges</title>
+           <script language="vbscript">
+              sub calc ()
+                 dim X
+                  if document.frm.r1(0).checked then
+                   x=x+56000
+                  elseif document.frm.r1(1).checked then
+                     x=x+50000
+                   else
+                         msgbox("please check any course type")
+                          exit sub
+                  end if
+                  if (document.frm.chk1.checked) then
+                    x=x+5000
+                  end if 
+                      if (document.frm.chk1.checked) then
+                    x=x+15000
+                  end if 
+               msgbox("Your total charges = "&x)
+              end sub
+           </script      
+       </head>
+       <body BACKGROUND="G:\PROJECT FILE\HTML\17530048.JPG">
+          <H1 ALIGN= "CENTER"> <FONT COLOR="AQUA">To Check The Charges Of Semester With Facility </H1>
+          <CENTER>
+           <TABLE BORDER=2>
+            <TR>
+               <TD>
+                   <form name="frm">
+                       <TABLE>
+                          <TR>
+                              <TD ALIGN=LEFT>   <FONT SIZE="5">  
+                                   Enrollment No. 
+                              <TD> <input type="text box" >
+                          <TR>
+                              <TD ALIGN=LEFT>   <FONT SIZE="5">
+                                   Course.      
+                              <TD>     <FONT SIZE="5">   
+                                     <input type="radio" name="r1" value="mba"> MBA
+                                     <input type="radio" name="r1" value="mca"> MCA
+                          <TR>
+                               <TD ALIGN=LEFT>   <FONT SIZE="5">
+                                   Facility available
+                               <TD>      <FONT SIZE="5">
+                                   <input type="checkbox" name="chk1" value="Library"> Library
+                                   <input type="checkbox" name="chk2" value="Hostel"> Hostel
+                          <TR>
+                              <TD COLSPAN=2 ALIGN=CENTER>
+                                    <input type="button" value="verify" onclick="calc">  </CENTER>
+                       </TABLE> 
+                   </form>
+           </TABLE>
+          </CENTER>
+       </body>
+</html>
